@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-primary pull-right mgn" (click)="back()"> back </button>
+  </div>
+</div>
+<div class="cube" *ngFor="let country of countries">
+  
+    <div class="row" >
+      <div class="col-md-6">
+        <p>{{country.code}} </p>
+        <h5>{{country.name}}</h5>
+        <div class="row" >
+          <div class="col-md-12">
+           <p>phone: {{country.callingCodes}} </p>
+           <p>Capital: {{country.capital}} </p>
+           <p>Currency: <span *ngFor="let value  of country.currencies">{{value.name }} </span>  </p>
+           <p>Languages: <span *ngFor="let value  of country.languages">{{value.name }} </span> </p> 
+      
+          </div>    
+    
+        </div>
+      </div>
+      <div class="col-md-2">
+        <img src="{{country.flag}}" class="flag-img"/>
+      </div>
+    </div>
+
+
+</div>
